@@ -38,7 +38,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 2fr 1fr;
   grid-template-rows: auto 1fr;
   height: 100%;
 }
@@ -78,13 +78,23 @@ body {
 .ls-top {
   display: grid;
   grid-row: 2/3;
-  grid-template-columns: repeat(2, minmax(43px, 0.1fr));
+  /* grid-template-columns: repeat(2, minmax(43px, 0.1fr)); */
   row-gap: 1rem;
 }
 
+.ls-hover {
+  display: flex;
+  gap: 10px;
+}
+
+.ls-hover:hover {
+  color: #fb8c00;
+  filter: invert(58%) sepia(85%) saturate(606%) hue-rotate(358deg) brightness(101%) contrast(101%);
+  /* background-color: white; */
+}
 .ls-bottom {
   display: grid;
-  grid-template-columns: repeat(2, minmax(43px, 0.1fr));
+  /* grid-template-columns: repeat(2, minmax(43px, 0.1fr)); */
   row-gap: 1rem;
 }
 
@@ -114,11 +124,16 @@ body {
   height: 200px;
   background-color: #1e1e1e;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  border-left: 2px solid #fb8c00;
-  display: -webkit-box;              
-  -webkit-line-clamp: 3;             
-  -webkit-box-orient: vertical;      
-  overflow: hidden;                  
+  border-left: 3px solid #e0e0e0;
+  border-radius: 5px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card:hover {
+  border-left: 3px solid #fb8c00;
 }
 
 .project-title {
@@ -150,4 +165,61 @@ body {
   grid-row: 2/3;
   grid-column: 5/6;
   background-color: rgba(0, 0, 0, 0.8);
+  display: grid;
+  grid-template-rows: auto 1fr auto 1fr;
+  gap: 1rem;
 }
+
+.announcements {
+  grid-row: 2/3;
+  background-color: #1e1e1e;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  /* border-left: 2px solid #fb8c00; */
+  display: grid;
+  gap: 5px;
+  padding: 15px;
+  border-radius: 5px;
+  border-left:3px solid #e0e0e0;
+  /* display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden; */
+}
+
+.announcements:hover {
+  border-left: 3px solid #fb8c00;
+}
+
+.line {
+  position: relative;
+}
+
+.line:after {
+  content: '';
+  width: 80%;
+  position: absolute;
+  left: 10%;
+  bottom:15%;
+  height: 1px;
+  border-bottom: 1px solid white;
+}
+
+.ann-item p {
+  font-size: clamp(0.3rem, 0.6rem, 3rem);
+}
+
+.ann-item > p:first-child {
+  font-weight: 900;
+}
+
+.ann-item > p:last-child {
+  color: #a0a0a0;
+}
+
+.trending {
+  grid-row: 4/5;
+  background-color: #1e1e1e;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  /* border-left: 2px solid #fb8c00; */
+}
+
