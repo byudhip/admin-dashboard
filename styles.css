@@ -9,6 +9,8 @@
 
 :root {
   font-size: 20px;
+  --primary-color: #e0e0e0;
+  --secondary-color: #A0A0A0;
 }
 
 h1,
@@ -19,6 +21,7 @@ h5,
 div {
   color: #e0e0e0;
 }
+
 
 
 button,
@@ -73,7 +76,6 @@ body {
   display: grid;
   grid-row: 2/3;
   row-gap: 1rem;
-  
 }
 
 .ls-hover {
@@ -88,7 +90,8 @@ body {
 
 .ls-hover:hover {
   color: #fb8c00;
-  filter: invert(58%) sepia(85%) saturate(606%) hue-rotate(358deg) brightness(101%) contrast(101%);
+  filter: invert(58%) sepia(85%) saturate(606%) hue-rotate(358deg)
+    brightness(101%) contrast(101%);
 }
 .ls-bottom {
   display: grid;
@@ -140,7 +143,7 @@ body {
 
 .project-text {
   font-size: clamp(8px, 0.6rem, 2rem);
-  
+  color: var(--secondary-color);
   padding: 0.7rem;
 }
 
@@ -174,9 +177,7 @@ body {
   gap: 5px;
   padding: 25px;
   border-radius: 5px;
-  
 }
-
 
 .ann-item p {
   font-size: clamp(0.3rem, 0.6rem, 3rem);
@@ -187,7 +188,11 @@ body {
   margin-bottom: 5px;
 }
 
-.ann-item:hover {
+.ann-item p:last-child {
+    color: var(--secondary-color);
+  }
+
+.ann-item:hover p {
   color: #fb8c00;
 }
 
@@ -197,7 +202,7 @@ body {
 }
 
 .line::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 10%;
@@ -210,6 +215,29 @@ body {
   grid-row: 4/5;
   background-color: #1e1e1e;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  padding: 15px;
+  padding: 20px;
+  border-radius: 5px;
+}
+.trend-item {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem;
 }
 
+.user-pic {
+  width: clamp(1rem, 2.5rem, 5rem);
+  height: clamp(1rem, 2.5rem, 5rem);
+  border-radius: 25px;
+}
+
+.trend-item p {
+  font-size: clamp(0.3rem, 0.7rem, 3rem);
+}
+
+.trend-item p:last-child {
+  color: var(--secondary-color);
+}
+
+.trend-item:hover p {
+  color:#fb8c00
+}
