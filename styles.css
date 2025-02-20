@@ -20,6 +20,7 @@ div {
   color: #e0e0e0;
 }
 
+
 button,
 input,
 select,
@@ -64,44 +65,39 @@ body {
 }
 
 .logo {
-  width: clamp(0.5rem, 2rem, 4rem);
+  width: clamp(0.5rem, 1.8rem, 4rem);
   filter: invert(72%);
-}
-
-.logodiv {
-  grid-row: 1/2;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(43px, 0.1fr));
-  row-gap: 2rem;
 }
 
 .ls-top {
   display: grid;
   grid-row: 2/3;
-  /* grid-template-columns: repeat(2, minmax(43px, 0.1fr)); */
   row-gap: 1rem;
+  
 }
 
 .ls-hover {
   display: flex;
-  gap: 10px;
+  gap: 0.9rem;
+}
+
+.logodiv {
+  grid-row: 1/2;
+  gap: 0.3rem;
 }
 
 .ls-hover:hover {
   color: #fb8c00;
   filter: invert(58%) sepia(85%) saturate(606%) hue-rotate(358deg) brightness(101%) contrast(101%);
-  /* background-color: white; */
 }
 .ls-bottom {
   display: grid;
-  /* grid-template-columns: repeat(2, minmax(43px, 0.1fr)); */
   row-gap: 1rem;
 }
 
 .sidebar-text {
   font-size: clamp(15px, 70%, 3rem);
   font-weight: 900;
-  color: #e0e0e0;
 }
 
 .project {
@@ -138,13 +134,13 @@ body {
 
 .project-title {
   font-size: clamp(20px, 100%, 3rem);
-  color: #e0e0e0;
+  font-weight: 900;
   padding: 0.7rem;
 }
 
 .project-text {
   font-size: clamp(8px, 0.6rem, 2rem);
-  color: #a0a0a0;
+  
   padding: 0.7rem;
 }
 
@@ -157,7 +153,7 @@ body {
 }
 
 .icon {
-  width: 1.2rem;
+  width: clamp(0.6rem, 1.2rem, 3.6rem);
   filter: invert(72%);
 }
 
@@ -174,35 +170,13 @@ body {
   grid-row: 2/3;
   background-color: #1e1e1e;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  /* border-left: 2px solid #fb8c00; */
   display: grid;
   gap: 5px;
-  padding: 15px;
+  padding: 25px;
   border-radius: 5px;
-  border-left:3px solid #e0e0e0;
-  /* display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden; */
+  
 }
 
-.announcements:hover {
-  border-left: 3px solid #fb8c00;
-}
-
-.line {
-  position: relative;
-}
-
-.line:after {
-  content: '';
-  width: 80%;
-  position: absolute;
-  left: 10%;
-  bottom:15%;
-  height: 1px;
-  border-bottom: 1px solid white;
-}
 
 .ann-item p {
   font-size: clamp(0.3rem, 0.6rem, 3rem);
@@ -210,16 +184,32 @@ body {
 
 .ann-item > p:first-child {
   font-weight: 900;
+  margin-bottom: 5px;
 }
 
-.ann-item > p:last-child {
-  color: #a0a0a0;
+.ann-item:hover {
+  color: #fb8c00;
+}
+
+.line {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.line::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  height: 1px;
+  width: 80%;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .trending {
   grid-row: 4/5;
   background-color: #1e1e1e;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  /* border-left: 2px solid #fb8c00; */
+  padding: 15px;
 }
 
